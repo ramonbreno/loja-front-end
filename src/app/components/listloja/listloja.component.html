@@ -1,0 +1,27 @@
+<div class="container mt-5">
+
+    <table class="table table-striped">
+        <thead>
+            <!--<th>Id</th>-->
+            <th>Produto</th>
+            <th>Descrição</th>
+            <th>Preço (R$)</th>
+            <th>Ações </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let loja of lojas">
+                <!--<td>{{loja.id}}</td>-->
+                <td>{{loja.produto}}</td>
+                <td>{{loja.descricao}}</td>
+                <td>{{loja.preco}}</td>
+                <td><button class="btn btn-danger" (click)="deleteLoja(loja)">Deletar</button>
+                    <button class="btn btn-primary" (click)="updateLoja(loja)">Editar</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div class="form-group mt-3">
+        <button class="btn btn-primary" (click)="newLoja(lojas.length)">Novo Produto</button>
+    </div>
+
+</div>
